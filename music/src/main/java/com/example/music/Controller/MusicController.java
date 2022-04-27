@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 	        public List<Music> readMusic() {
 	            return mscService.getMusic();
 	        }
+	        //optional is a class that return 0 and 1
 	        @GetMapping("/playlist/track/{Id}")
 	        public Optional<Music> getMusicById(@PathVariable (value="Id") Long Id ){
             return mscService.getMusicById(Id);

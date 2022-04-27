@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 
 	@Entity
+	//different table name other wise with entity create same table name as class name
 	@Table(name = "Playlist")
 	
 	public class Music {  
@@ -30,10 +31,10 @@ import javax.persistence.Table;
 	        @Column(name="duration")
 	        private int duration;
 
+	 //getter and setter
 			public Long getId() {
 				return id;
 			}
-
 			public void setId(Long id) {
 				this.id = id;
 			}
@@ -70,6 +71,7 @@ import javax.persistence.Table;
 				this.duration = duration;
 			}
 			
+		       //default constructor (needed because jpa create the object of default constructor)
 			 public Music() {
 					super();
 				}

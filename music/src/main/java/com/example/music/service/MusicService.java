@@ -42,8 +42,8 @@ public Music updateMusic(Long Id, Music musicDetails) {
      msc.setArtist(musicDetails.getArtist());
      msc.setDuration(musicDetails.getDuration());
      
-     return mscRepository.save(msc);                                
-}
+     return mscRepository.save(msc);     
+     }
 //uptodate(patch)
 public Music fixMusic(Long id, String newName) {
 	Music msc= mscRepository.findById(id).get();
